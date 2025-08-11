@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إعلان عقاري — المكتب الهندسي</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff7e6;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      min-height: 90vh;
+    }
+    .card {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      background: #ffd24d;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .ad-number {
+      background: #333;
+      color: #c5c5c5;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 12px 0;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .ad-number span {
+      color: #001f3f; /* كحلي داكن */
+      background: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-left: 6px;
+      font-size: 22px;
+    }
+    .ad-text {
+      background: #fff;
+      padding: 18px;
+      border-radius: 8px;
+      font-size: 17px;
+      line-height: 1.5;
+      color: #001f3f;
+    }
+    .ad-text h3 {
+      margin: 0 0 10px;
+      color: #000;
+    }
+    .ad-text p {
+      margin: 6px 0;
+      color: #001f3f;
+    }
+    .ad-text .office-numbers {
+      margin-top: 12px;
+      font-weight: bold;
+      color: #001f3f;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="ad-number">
+      رقم هاتف المعلن:
+      <span id="adPhone">--</span>
+    </div>
+    <div class="ad-text">
+      <h3>المكتب الهندسي لفحص العقارات وشراء الأملاك للغير</h3>
+      <p>تجنب العقارات الرديئة واطلبنا عشان نرشحلك عقار مميز مع عمل الفحص الهندسي قبل الشراء</p>
+      <p class="office-numbers">📞 01027997707 - 01117292324</p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    let phone = params.get('phone') || '--';
+    document.getElementById('adPhone').textContent = phone;
+  </script>
+</body>
+</html>
